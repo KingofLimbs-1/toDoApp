@@ -1,16 +1,15 @@
-// User input 
+// User input
+let input = parseInt(prompt("Please enter a number: "))
 
-var userInput = prompt("Please enter a number: ")
-
-// Even check
-
-if(userInput %2 == 0){
-    alert("That number is even!")
+// Input checks
+if (Number.isInteger(input) && input % 2 == 0) {
+    console.log("Even")
 }
 
-// Odd check
-
-else{
-    alert("That number is odd!")
+if (Number.isInteger(input) && input % 2 != 0) {
+    console.log("Odd")
 }
 
+if (isNaN(input)) {
+    console.log("Oops that is not a number!")
+}

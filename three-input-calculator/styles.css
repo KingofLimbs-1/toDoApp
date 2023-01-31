@@ -1,15 +1,16 @@
+/* General Styling */
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
 }
 
+/* Body */
 body {
-    /* display: flex;
-    justify-content: center; */
     background: rgb(63, 94, 251);
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
 }
 
+/* Heading */
 h1 {
     text-align: center;
     text-decoration: underline;
@@ -18,9 +19,27 @@ h1 {
 
 }
 
+/* Subtext */
 h2 {
     text-align: center;
     padding-top: 30px;
     font-weight: 800;
     font-size: 35px;
+}
+
+/* Button styling */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+button {
+    border-radius: 100px;
+    margin: 70px;
+    height: 150px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

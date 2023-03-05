@@ -1,16 +1,16 @@
 /* ----- APP Styles here ------ */
 
-/*---------remove this comment to start---------
+
 
         .register {
             display: block;
         } 
 
         .users {
-            display: none;
+            display: block;
         }
 
-    ---------remove this comment to start---------*/
+
 
 /* id for control form */
 #register-form {

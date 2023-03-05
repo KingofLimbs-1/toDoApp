@@ -1,16 +1,12 @@
 /* ----- APP Styles here ------ */
 
+section.register {
+  display: block;
+}
 
-
-        .register {
-            display: block;
-        } 
-
-        .users {
-            display: block;
-        }
-
-
+section.users {
+  display: none;
+}
 
 /* id for control form */
 #register-form {

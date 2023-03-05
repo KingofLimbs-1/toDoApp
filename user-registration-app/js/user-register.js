@@ -14,21 +14,21 @@ console.log(userTabs);
 
 /* --- Nav references --- */
 
-// References the "View User List" button
-const userView = document.getElementById("register-tab-button");
-console.log(userView);
+// Register user button
+const userRegister = document.querySelector("#users-tab-button");
+console.log(userRegister);
 
-// References the "Register" button
-const userRegistration = document.getElementById("users-tab-button");
-console.log(userRegistration);
+// User list button
+const userView = document.querySelector("#register-tab-button");
+console.log(userView);
 
 /* --- Form field references --- */
 
 // References form input fields
 // Subject to change though. Not sure if I'm referencing the right part.
-// Instead of the input tag, maybe I should be referencing the form itself. 
+// Instead of the input tag, maybe I should be referencing the form itself.
 // Only referenced it like this cause I wanted referencing to be specific to input fields, not <h1> tag as well for example.
-// Will come back to this. 
+// Will come back to this.
 const formFields = document.getElementsByTagName("input");
 console.log(formFields);
 
@@ -41,8 +41,18 @@ console.log(tableList);
     Functionality
 ---------------------------------------------------- */
 
-// code here...
-
 /* ----------------------------------------------------
     Event Listenters and Interactivity
 ---------------------------------------------------- */
+
+// View User List Button (On-click interactivity)
+// Added a kind of "toggle on/off" functionality to this event listener.
+
+userView.addEventListener("click", function() {
+    const viewUsers = document.querySelector("section.users");
+    if (viewUsers.style.display === "none" || viewUsers.style.display === "") {
+        viewUsers.style.display = "block";
+    } else {
+        viewUsers.style.display = "none";
+    }
+});

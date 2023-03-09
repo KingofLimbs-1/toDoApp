@@ -28,9 +28,13 @@ console.log(userView);
 const formFields = document.getElementById("register-form");
 console.log(formFields);
 
-/* --- Table list reference --- */
-const tableList = document.getElementById("user-list");
-console.log(tableList);
+/* --- User list reference --- */
+const userList = document.getElementById("user-list");
+console.log(userList);
+
+// Used with "createUser" function
+// User object data storage
+const users = [];
 
 /* ----------------------------------------------------
     Functionality
@@ -44,9 +48,6 @@ const lastName = document.getElementById("lastname").value;
 const username = document.getElementById("username").value;
 const email = document.getElementById("email").value;
 const password = document.getElementById("password").value;
-
-// User object data storage
-const users = [];
 
 // Function
 function createUser(firstName, lastName, username, email, password) {
@@ -69,7 +70,6 @@ function createUserElement(userElement) {
   const newUsers = document.createElement("li");
   // Adding to the entry class
   newUsers.classList.add("entry");
-
   // New span elements creation
 
   // Username
@@ -94,14 +94,13 @@ function createUserElement(userElement) {
 
   // Adding newly created span elements to "newUsers" element
 
-  newUsers.append(usernameSpan);
-  newUsers.append(firstNameSpan);
-  newUsers.append(lastNameSpan);
-  newUsers.append(emailSpan);
-  newUsers.append(passwordSpan);
+  newUsers.appendChild(usernameSpan);
+  newUsers.appendChild(firstNameSpan);
+  newUsers.appendChild(lastNameSpan);
+  newUsers.appendChild(emailSpan);
+  newUsers.appendChild(passwordSpan);
 
   // Function return
-
   return newUsers;
 }
 
@@ -110,14 +109,12 @@ function createUserElement(userElement) {
 // Function
 function populateUserList(users) {
   for (i = 0; i < users.length; i++) {
-    // User List HTML retrieval
-    const userList = document.getElementById("user-list");
     // "user" array element initialization
-    const user = users[i];
+    let user = users[i];
     // "createUserElement" function call
     const li = createUserElement(user);
     // Appending "li" to "userList"
-    userList.append(li);
+    userList.appendChild(li);
   }
 }
 
@@ -125,7 +122,7 @@ function populateUserList(users) {
     Event Listenters and Interactivity
 ---------------------------------------------------- */
 
-// View User List Button (Event listener/On-click interactivity)
+// View User List Button (Event listener)
 // Added a "toggle on/off" functionality to this event listener.
 userView.addEventListener("click", function () {
   const viewUsers = document.querySelector("section.users");
@@ -136,16 +133,21 @@ userView.addEventListener("click", function () {
   }
 });
 
-// Register User Button (Event listener/On-click interactivity)
+// Register User Button (Event listener)
+// Also added a "toggle on/off" functionality to this event listener
 userRegister.addEventListener("click", function () {
   const registerSection = document.querySelector("section.register");
-  registerSection.style.display = "block";
+  if (
+    registerSection.style.display === "block" ||
+    registerSection.style.display === ""
+  ) {
+    registerSection.style.display = "none";
+  } else {
+    registerSection.style.display = "block";
+  }
 });
 
-// Submit Button (Event listener)
-
-// Submit button Test
-
+// Submit/Register Button (Event listener)
 formFields.addEventListener("submit", function (event) {
   // Prevent form default behavior
   event.preventDefault();
@@ -168,4 +170,16 @@ formFields.addEventListener("submit", function (event) {
   document.getElementById("username").value = "";
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
+});
+
+// User List Element Removal (Event Listener)
+userList.addEventListener("dblclick", function (event) {
+  // Check to see if element the user is trying to delete exists within the parent element
+  if (event.target.classList.contains("entry")) {
+    // Check to see if event/click is a "double-click" event using ".detail" method
+    if ((event.detail = 2)) {
+      // Element removal
+      event.target.remove();
+    }
+  }
 });

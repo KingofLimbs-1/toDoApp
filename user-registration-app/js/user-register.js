@@ -93,7 +93,6 @@ function createUserElement(userElement) {
   passwordSpan.textContent = userElement.password;
 
   // Adding newly created span elements to "newUsers" element
-
   newUsers.appendChild(usernameSpan);
   newUsers.appendChild(firstNameSpan);
   newUsers.appendChild(lastNameSpan);
@@ -171,6 +170,22 @@ formFields.addEventListener("submit", function (event) {
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
 });
+
+// const registerForm = document.getElementById("register-form");
+
+// registerForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   // Create the new user object
+//   createUser();
+
+//   // Create the new user element and add it to the list
+//   const newUserElement = createUserElement();
+//   userList.appendChild(newUserElement);
+
+//   // Clear the form fields
+//   event.target.reset();
+// });
 
 // User List Element Removal (Event Listener)
 userList.addEventListener("dblclick", function (event) {

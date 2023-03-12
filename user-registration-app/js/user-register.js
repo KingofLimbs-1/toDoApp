@@ -148,6 +148,7 @@ userRegister.addEventListener("click", function () {
 
 // Submit/Register Button (Event listener)
 formFields.addEventListener("submit", function (event) {
+  userList.innerHTML = "";
   // Prevent form default behavior
   event.preventDefault();
 

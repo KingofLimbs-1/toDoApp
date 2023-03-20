@@ -1,4 +1,4 @@
-/* --- HTML Element References --- */ 
+/* --- HTML Element References --- */
 
 // Add 3 Users button
 const addThreeUsers = document.querySelector("#three-user-button");
@@ -15,36 +15,33 @@ console.log(displayUsers);
 // Sort User Button
 const sortUsers = document.querySelector("#sort-user-button");
 console.log(sortUsers);
+;
 
-
-/* --- Arrays --- */ 
-
-// Empty array for sorting
-newArray = [];
+/* --- Arrays --- */
 
 // User List
-const userList = [
-  "PixelPalooza",
-  "CosmicChaos",
-  "MindMeldMaster",
-  "SnackAttack87",
-  "NeonNinja",
-  "TechTornado",
-  "MysticMuffin",
-  "AquaAce",
-  "SkySurferX",
-  "SparklingSapphire",
-];
 
-/* --- Functions --- */ 
+// Array
+// let newArray = [];
+// let userList = ["Radiohead", "Joy Division", "The Cure", "Nirvana"];
 
+/* --- Functions --- */
 
+//  Sort User Function
+let userList = ["Radiohead", "Joy Division", "The Cure", "Nirvana"];
+let newArray = [];
+let users = userList;
+// function sortUserList() {
+//   for (i = 0; i < userList; i++) {
+//     let sorted = users.sort();
+//     sorted.append(newArray);
+//   }
+//   return newArray;
+// }
 
+console.log(users[0]);
 
-
-
-
-/* --- Event Listeners --- */ 
+/* --- Event Listeners --- */
 
 // Add Three Users
 addThreeUsers.addEventListener("click", function () {
@@ -63,4 +60,5 @@ displayUsers.addEventListener("click", function () {
 
 // Sort users
 sortUsers.addEventListener("click", function () {
+  console.log(sortUserList());
 });

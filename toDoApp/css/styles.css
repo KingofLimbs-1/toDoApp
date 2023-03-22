@@ -1,0 +1,39 @@
+/* GENERAL APP STYLING */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ELEMENT STYLING */
+
+/* Body */
+body {
+  background-color: #2d2d2d;
+}
+
+/* Navigation-bar */
+.navBar {
+  display: flex;
+  background-color: #282828;
+  width: auto;
+  height: 50px;
+}
+
+.navBar ul {
+  list-style-type: none;
+}
+
+/* Sidebar */
+
+.sideBar {
+  display: flex;
+  position: absolute;
+  background-color: #282828;
+  width: 120px;
+  height: 100vh;
+}
+
+.sideBar ul {
+  list-style-type: none;
+}

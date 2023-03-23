@@ -1,8 +1,14 @@
-/* GENERAL APP STYLING */
+/* GENERAL/REUSABLE STYLING */
 
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+#heading {
+  font-family: "Jetbrains Mono";
+  font-size: 19px;
+  color: azure;
 }
 
 /* ELEMENT STYLING */
@@ -12,7 +18,7 @@ body {
   background-color: #2d2d2d;
 }
 
-/* Navigation-bar */
+/* Nav-bar Styling */
 .navBar {
   display: flex;
   background-color: #282828;
@@ -24,8 +30,7 @@ body {
   list-style-type: none;
 }
 
-/* Sidebar */
-
+/* Sidebar Styling */
 .sideBar {
   display: flex;
   position: absolute;

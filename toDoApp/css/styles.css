@@ -7,28 +7,69 @@
 
 /* Body */
 body {
+  font-family: "Inter";
   background-color: #2d2d2d;
 }
 
 /* Headings */
+
+header {
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
 #heading {
   font-family: "Jetbrains Mono";
+  font-weight: 500;
+  font-size: 19px;
+  color: #ffff;
 }
 
-/* Add new entry field */
-.add-new-entry{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+section h2 {
+  margin-top: 50px;
+  margin-left: 18px;
 }
 
-/* To-do items */
-#to-do-items {
+/* New Task Creation */
+
+form {
+  text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-#to-do-items input{
-    margin: 10px;
+/* Add task entry field */
+#taskInput {
+  height: 50px;
+  width: 80%;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: black;
+  box-shadow: 0 0 3px #faf9f6;
+}
+
+/* Add task button */
+#add-new-task-button {
+  margin-top: 25px;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f70cc3;
+  color: white;
+  cursor: pointer;
+}
+
+#add-new-task-button:hover {
+  box-shadow: 0 0 3px #faf9f6;
+}
+
+img {
+  margin-top: 5px;
+  height: 30px;
+  width: 30px;
 }

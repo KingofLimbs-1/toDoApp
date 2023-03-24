@@ -21,21 +21,25 @@
   </head>
   <body>
     <header>
-      <h1 id="heading">Hey user, this is your to-do list.</h1>
+      <h1 id="heading">Hey Miles, this is your to-do list.</h1>
     </header>
 
     <!-- New Task Creation -->
-    <div class="add-new-entry">
-      <input type="text" placeholder="Add a task" />
+    <div class="new-entry-container">
+      <form>
+        <!-- Add task button -->
+        <button type="submit" id="add-new-task-button">
+            <img src="images\plus-sign.png">
+        </button>
+        <!-- Add task entry -->
+        <input id="taskInput" type="text" placeholder="Add a task" />
+      </form>
     </div>
 
-    <!-- To-Do Items -->
-    <form id="to-do-items">
-      <!-- Tasks -->
-      <input type="text" placeholder="Example Task #1" />
-      <input type="text" placeholder="Example Task #2" />
-      <input type="text" placeholder="Example Task #3" />
-      <input type="text" placeholder="Example Task #3" />
-    </form>
+    <!-- Task List -->
+    <section>
+        <h2 id="heading">Tasks</h2>
+      <ul id="taskList"></ul>
+    </section>
   </body>
 </html>

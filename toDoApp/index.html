@@ -20,26 +20,36 @@
     />
   </head>
   <body>
-    <header>
+
+    <!-- Heading + Toggle Button  -->
+    <div class="heading-container">
+      <!-- Heading -->
       <h1 id="heading">Hey Miles, this is your to-do list.</h1>
-    </header>
+      <!-- Dark/Light Toggle Button -->
+      <div class="toggle">
+        <img src="/images/sun-icon.png" />
+      </div>
+    </div>
+    <!--/ Heading + Toggle Button  /-->
 
     <!-- New Task Creation -->
     <div class="new-entry-container">
       <form>
         <!-- Add task button -->
         <button type="submit" id="add-new-task-button">
-            <img src="images\plus-sign.png">
+          <img src="images\plus-sign.png" />
         </button>
         <!-- Add task entry -->
         <input id="taskInput" type="text" placeholder="Add a task" />
       </form>
     </div>
+    <!--/ New Task Creation /-->
 
     <!-- Task List -->
     <section>
-        <h2 id="heading">Tasks</h2>
+      <h2 id="heading">Tasks</h2>
       <ul id="taskList"></ul>
     </section>
+    <!--/ Task List /-->
   </body>
 </html>

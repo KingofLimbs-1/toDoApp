@@ -1,22 +1,21 @@
-/* GENERAL PAGE STYLING */
+/* --- GENERAL STYLING --- */
+
 * {
   box-sizing: border-box;
 }
 
-/* ELEMENT STYLING */
+/* ---/ GENERAL STYLING /--- */
 
-/* Body */
+/* --- BODY --- */
+
 body {
   font-family: "Inter";
   background-color: #2d2d2d;
 }
 
-/* Headings */
+/* ---/ BODY /--- */
 
-header {
-  margin-top: 20px;
-  margin-left: 18px;
-}
+/* --- HEADINGS --- */
 
 #heading {
   font-family: "Jetbrains Mono";
@@ -30,25 +29,60 @@ section h2 {
   margin-left: 18px;
 }
 
-/* New Task Creation */
+/* ---/ HEADINGS /--- */
 
+/* --- MAIN HEADING + TOGGLE BUTTON --- */
+
+.heading-container {
+  display: flex;
+  justify-content: right;
+  justify-content: space-between;
+}
+
+.heading-container h1 {
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+.toggle {
+  margin-top: 10px;
+  margin-right: 18px;
+  margin-bottom: 15px;
+  background-color: #222222;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.toggle img {
+  height: 40px;
+  width: 40px;
+  margin-left: 5.27px;
+}
+
+/* ---/ MAIN HEADING + TOGGLE BUTTON /--- */
+
+/* --- NEW TASK CREATION --- */
+
+/* Add task entry field */
 form {
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-/* Add task entry field */
 #taskInput {
   height: 50px;
   width: 80%;
   margin: 20px;
   padding: 10px;
   font-size: 20px;
+  color: white;
   border-radius: 15px;
   border: none;
   background-color: black;
-  box-shadow: 0 0 3px #faf9f6;
+  box-shadow: rgba(80,80,80, 0.25) 0px 20px 20px, rgba(80, 80, 80, 0.12) 0px -12px 30px, rgba(80, 80, 80, 0.12) 0px 4px 6px, rgba(80, 80, 80, 0.17) 0px 12px 13px, rgba(80, 80, 80, 0.09) 0px -3px 5px;
+  /* box-shadow: rgba(72,72,72, 0.3) 0px 15px 35px, rgba(72,72,72, 0.22) 0px 15px 12px; */
 }
 
 /* Add task button */
@@ -73,3 +107,14 @@ img {
   height: 30px;
   width: 30px;
 }
+
+/* ---/ NEW TASK CREATION /--- */
+
+/* --- TASK LIST --- */
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* ---/ TASK LIST /--- */

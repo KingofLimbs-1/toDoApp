@@ -1,22 +1,16 @@
-/* --- GENERAL STYLING --- */
-
+/* --- DARK MODE --- */
+/* || GENERAL STYLING */
 * {
   box-sizing: border-box;
 }
-
-/* ---/ GENERAL STYLING /--- */
-
-/* --- BODY --- */
 
 body {
   font-family: "Inter";
   background-color: #2d2d2d;
 }
+/* … */
 
-/* ---/ BODY /--- */
-
-/* --- HEADINGS --- */
-
+/* || HEADINGS */
 #heading {
   font-family: "Jetbrains Mono";
   font-weight: 500;
@@ -28,43 +22,9 @@ section h2 {
   margin-top: 50px;
   margin-left: 18px;
 }
+/* … */
 
-/* ---/ HEADINGS /--- */
-
-/* --- MAIN HEADING + TOGGLE BUTTON --- */
-
-.heading-container {
-  display: flex;
-  justify-content: right;
-  justify-content: space-between;
-}
-
-.heading-container h1 {
-  margin-top: 20px;
-  margin-left: 18px;
-}
-
-.toggle {
-  margin-top: 10px;
-  margin-right: 18px;
-  margin-bottom: 15px;
-  background-color: #222222;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-
-.toggle img {
-  height: 40px;
-  width: 40px;
-  margin-left: 5.27px;
-}
-
-/* ---/ MAIN HEADING + TOGGLE BUTTON /--- */
-
-/* --- NEW TASK CREATION --- */
-
-/* Add task entry field */
+/* || ADD TASK SECTION */
 form {
   text-align: center;
   display: flex;
@@ -81,11 +41,12 @@ form {
   border-radius: 15px;
   border: none;
   background-color: black;
-  box-shadow: rgba(80,80,80, 0.25) 0px 20px 20px, rgba(80, 80, 80, 0.12) 0px -12px 30px, rgba(80, 80, 80, 0.12) 0px 4px 6px, rgba(80, 80, 80, 0.17) 0px 12px 13px, rgba(80, 80, 80, 0.09) 0px -3px 5px;
+  box-shadow: rgba(80, 80, 80, 0.25) 0px 20px 20px,
+    rgba(80, 80, 80, 0.12) 0px -12px 30px, rgba(80, 80, 80, 0.12) 0px 4px 6px,
+    rgba(80, 80, 80, 0.17) 0px 12px 13px, rgba(80, 80, 80, 0.09) 0px -3px 5px;
   /* box-shadow: rgba(72,72,72, 0.3) 0px 15px 35px, rgba(72,72,72, 0.22) 0px 15px 12px; */
 }
 
-/* Add task button */
 #add-new-task-button {
   margin-top: 25px;
   height: 40px;
@@ -107,14 +68,71 @@ img {
   height: 30px;
   width: 30px;
 }
+/* … */
 
-/* ---/ NEW TASK CREATION /--- */
+/* || MAIN HEADING + TOGGLE BUTTON */
+.heading-container {
+  display: flex;
+  justify-content: right;
+  justify-content: space-between;
+}
 
-/* --- TASK LIST --- */
+.heading-container h1 {
+  margin-top: 20px;
+  margin-left: 18px;
+}
 
+.toggle {
+  margin-top: 10px;
+  margin-right: 18px;
+  margin-bottom: 15px;
+  background-color: #222222;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.toggle img {
+  height: 40px;
+  width: 40px;
+  margin-left: 5.27px;
+}
+/* ... */
+
+/* || TASK LIST */
 #taskList {
   list-style-type: none;
   padding: 0;
 }
+/* ... */
 
-/* ---/ TASK LIST /--- */
+/* --- LIGHT MODE --- */
+/* || BODY */
+/* Body styling for light mode using ID ("#all-elements") */
+#all-elements.light-mode {
+  background-color: #ffffff;
+}
+/* ... */
+
+/* || HEADINGS */
+/* Main Heading */
+#all-elements.light-mode .heading-container h1 {
+  color: #000;
+  font-weight: 600;
+}
+/* Task List Heading */
+#all-elements.light-mode section h2 {
+  color: #000;
+  font-weight: 600;
+}
+/* ... */
+
+/* || MAIN HEADING + TOGGLE BUTTON */
+/* Toggle Button */
+#all-elements.light-mode .toggle {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+/* ... */

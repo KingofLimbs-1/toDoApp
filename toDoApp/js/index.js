@@ -19,6 +19,17 @@ const toggle = document.querySelector(".toggle");
 /* --- Event Listeners --- */
 // Light Mode Switch Event
 toggle.addEventListener("click", function () {
+  // Body element "light-mode" switch
   allElements.classList.toggle("light-mode");
+  // CSS class state toggle references
+  toggle.classList.toggle("light");
+  toggle.classList.toggle("dark");
+  // Toggle switch "image" switch
+  const toggleImg = document.querySelector("img");
+  if (toggle.classList.contains("light")) {
+    toggleImg.src = "/images/moon-icon.png";
+  } else {
+    toggleImg.src = "/images/sun-icon.png";
+  }
 });
 /* ---/ Event Listeners /--- */

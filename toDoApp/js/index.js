@@ -14,9 +14,25 @@ const toggle = document.querySelector(".toggle");
 /* ---/ Element References /--- */
 
 /* --- Functionality --- */
+
+// Add Task to List Function
+function addTask() {
+  // Fetching taskInput value
+  const taskText = taskInput.value;
+  // Check to see if taskInput is empty
+  if (taskText !== "") {
+    // taskList <li> element creation
+    const li = document.createElement("li");
+    li.textContent = taskText;
+    // taskList population
+    taskList.appendChild(li);
+    taskInput.value = "";
+  }
+}
 /* ---/ Functionality /--- */
 
 /* --- Event Listeners --- */
+
 // Light Mode Switch Event
 toggle.addEventListener("click", function () {
   // Body element "light-mode" switch
@@ -31,5 +47,12 @@ toggle.addEventListener("click", function () {
   } else {
     toggleImg.src = "/images/sun-icon.png";
   }
+});
+
+// Add Task Button Event 
+addTaskBtn.addEventListener("click", function (event) {
+  // Prevent form default behavior
+  event.preventDefault(); 
+  addTask();
 });
 /* ---/ Event Listeners /--- */

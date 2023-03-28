@@ -17,15 +17,20 @@ const toggle = document.querySelector(".toggle");
 
 // Add Task to List Function
 function addTask() {
-  // Fetching taskInput value
+  // "taskInput" value variable assignment
   const taskText = taskInput.value;
-  // Check to see if taskInput is empty
   if (taskText !== "") {
-    // taskList <li> element creation
+    // "li"/task element creation
     const li = document.createElement("li");
+    // "li content" variable assignment
     li.textContent = taskText;
-    // taskList population
+    // Checkbox element creation
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    // "li" + "checkbox" element population
+    li.appendChild(checkbox);
     taskList.appendChild(li);
+    // "taskInput" field clear
     taskInput.value = "";
   }
 }
@@ -49,10 +54,10 @@ toggle.addEventListener("click", function () {
   }
 });
 
-// Add Task Button Event 
+// Add Task Button Event
 addTaskBtn.addEventListener("click", function (event) {
   // Prevent form default behavior
-  event.preventDefault(); 
+  event.preventDefault();
   addTask();
 });
 /* ---/ Event Listeners /--- */

@@ -19,12 +19,11 @@
       rel="stylesheet"
     />
   </head>
-  <body id="all-elements">
-
+  <body id="allElements">
     <!-- Main Heading + Toggle Button  -->
-    <div class="heading-container">
+    <div class="headingContainer">
       <!-- Heading -->
-      <h1 id="heading">Hey, this is your to-do list.</h1>
+      <h1 id="heading">Hey, this is your to-do list!</h1>
       <!-- Dark/Light Toggle Button -->
       <div class="toggle">
         <img class="toggleImg" src="/images/sun-icon.png" />
@@ -46,10 +45,17 @@
     <!--/ Add Task Section /-->
 
     <!-- Task List -->
-    <section>
+    <section class="incompleteTasks">
       <h2 id="heading">Tasks</h2>
       <ul id="taskList"></ul>
     </section>
     <!--/ Task List /-->
+
+    <!-- Completed Tasks -->
+    <section class="completeTasks">
+      <h2 id="heading">Completed</h2>
+      <ul id="completedTasks"></ul>
+    </section>
+    <!-- Completed Tasks -->
   </body>
 </html>

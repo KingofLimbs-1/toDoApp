@@ -8,6 +8,14 @@ body {
   font-family: "Inter";
   background-color: #2d2d2d;
 }
+
+section.incompleteTasks {
+  display: none;
+}
+
+section.completeTasks {
+  display: none;
+}
 /* … */
 
 /* || HEADINGS */
@@ -127,15 +135,27 @@ img {
   border-radius: 0.15em;
   cursor: pointer;
 }
+
+.editBtn {
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 40px;
+}
+
+.deleteBtn {
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 40px;
+}
 /* ... */
 
 /* || COMPLETED TASKS */
-#completedTasks{
+#completedTaskList {
   list-style: none;
   padding: 0;
 }
 
-#completedTasks li {
+#completedTaskList li {
   text-decoration: line-through;
   padding: 16px;
   margin: 25px;
@@ -197,7 +217,7 @@ img {
 /* ... */
 
 /* || COMPLETED TASKS */
-#allElements.light-mode #completedTasks li{
+#allElements.light-mode #completedTaskList li {
   background-color: #ffffff;
   color: #000;
   /* ... */

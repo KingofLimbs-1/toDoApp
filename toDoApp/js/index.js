@@ -19,6 +19,39 @@ let tasks = [];
 
 /* --- Functionality --- */
 
+// "Local storage save" function
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// "Task array load from storage" function
+function loadTasks() {
+  // "tasks" array retrieval
+  const savedTasks = localStorage.getItem("tasks");
+  if (savedTasks !== null) {
+    // "savedTasks" string parse +  new variable assignment
+    tasks = JSON.parse(savedTasks);
+    // "tasks" array task object loop
+    for (let i = 0; i < tasks.length; i++) {
+      const task = tasks[i];
+      const li = document.createElement("li");
+      li.textContent = task.text;
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      li.appendChild(checkbox);
+      const deleteBtn = document.createElement("button");
+      deleteBtn.className = "deleteBtn";
+      deleteBtn.textContent = "Delete";
+      li.appendChild(deleteBtn);
+      const editBtn = document.createElement("button");
+      editBtn.textContent = "Edit";
+      editBtn.className = "editBtn";
+      li.appendChild(editBtn);
+      taskList.appendChild(li);
+    }
+  }
+}
+
 // "Add task to task list" function
 function addTask() {
   // "taskInput" value variable assignment
@@ -49,11 +82,12 @@ function addTask() {
     editBtn.textContent = "Edit";
     editBtn.className = "editBtn";
     li.appendChild(editBtn);
-    
+
     // "li" append to taskList
     taskList.appendChild(li);
     // "taskInput" field clear
     taskInput.value = "";
+    saveTasks();
   }
 }
 
@@ -68,13 +102,13 @@ function completeTask(event) {
   ) {
     completeTasks.style.display = "block";
   }
-  
+
   // Task list checkbox reference
   const checkbox = event.target;
   // List item (checkbox parent) reference
   const li = checkbox.parentNode;
-   // Task content reference
-   const taskContent = li.firstChild.textContent;
+  // Task content reference
+  const taskContent = li.firstChild.textContent;
   // Completed task "li" creation
   const completedTask = document.createElement("li");
   // Task text node creation
@@ -85,10 +119,17 @@ function completeTask(event) {
   completedTaskList.appendChild(completedTask);
   // "li" + task text removal from "taskList"
   taskList.removeChild(li);
+
+  saveTasks();
 }
 /* ---/ Functionality /--- */
 
 /* --- Event Listeners --- */
+
+// Window Object Event
+window.addEventListener("load", function () {
+  loadTasks();
+});
 
 // Light Mode Switch Event
 toggle.addEventListener("click", function () {
@@ -150,6 +191,7 @@ taskList.addEventListener("click", function (event) {
     const taskIndex = Array.from(taskList.children).indexOf(li);
     // Task text update with new user input
     tasks[taskIndex].text = li.textContent.trim();
+    saveTasks();
   }
 });
 
@@ -167,6 +209,7 @@ taskList.addEventListener("click", function (event) {
     tasks.splice(taskIndex, 1);
     // Task element removal
     taskList.removeChild(li);
+    saveTasks();
   }
 });
 /* ---/ Event Listeners /--- */

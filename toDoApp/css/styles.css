@@ -96,6 +96,7 @@ img {
   background-color: #222222;
   width: 50px;
   border-radius: 50%;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -138,14 +139,23 @@ img {
 
 .editBtn {
   float: right;
-  margin-left: 5px;
-  margin-bottom: 40px;
+  margin-top: 1px;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  background-color: #222222;
+  cursor: pointer;
 }
 
 .deleteBtn {
   float: right;
-  margin-left: 5px;
-  margin-bottom: 40px;
+  margin-top: 1px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  color: #ffffff;
+  background-color: #222222;
+  cursor: pointer;
 }
 /* ... */
 
@@ -214,11 +224,21 @@ img {
   background-color: #ffffff;
   color: #000;
 }
+
+#allElements.light-mode .editBtn {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#allElements.light-mode .deleteBtn {
+  background-color: #ffffff;
+  color: #000;
+}
 /* ... */
 
 /* || COMPLETED TASKS */
 #allElements.light-mode #completedTaskList li {
   background-color: #ffffff;
   color: #000;
-  /* ... */
 }
+/* ... */

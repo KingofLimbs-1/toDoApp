@@ -195,7 +195,7 @@ taskList.addEventListener("click", function (event) {
   }
 });
 
-// Delete button Event
+// Delete Button Event
 taskList.addEventListener("click", function (event) {
   const target = event.target;
 

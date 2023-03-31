@@ -26,7 +26,7 @@ Your screen should look like this now:
 
 * Lastly, you are also able to change the screen display from "dark mode" to "light mode" and vice-versa! Depending on how your eyes feel, using the toggle button on the top right-hand side of the screen:
 
-![Screenshot 2023-03-31 223315](https://user-images.githubusercontent.com/99418553/229224349-08484a83-8a82-4762-b806-35c49ce64339.png) ![Screenshot 2023-03-31 223202](https://user-images.githubusercontent.com/99418553/229224474-128fa31e-85d7-499c-9b03-dfb798c774ba.png)
+![Screenshot 2023-03-31 223315](https://user-images.githubusercontent.com/99418553/229224349-08484a83-8a82-4762-b806-35c49ce64339.png) or ![Screenshot 2023-03-31 223202](https://user-images.githubusercontent.com/99418553/229224474-128fa31e-85d7-499c-9b03-dfb798c774ba.png)
 
 
 

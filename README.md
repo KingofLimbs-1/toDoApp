@@ -34,7 +34,7 @@ Your screen should look one of two ways now:
 Or 
 ![Screenshot 2023-03-31 220650](https://user-images.githubusercontent.com/99418553/229223383-b1e916cc-2c95-44c2-bcda-7577f196c993.png)
 
-*** That's all there is to it! **
+### That's all there is to it!
 
 
 
